@@ -32,7 +32,7 @@ For example, in order to install a particular Ruby version which is not
 available on the default `travis:ruby` image, and make it persistent,
 you can run:
 
-```    
+```
       docker -H tcp://0.0.0.0:4243 run -it --name travis_ruby travis:ruby su travis -l -c 'rvm install [version]'
       docker -H tcp://0.0.0.0:4243 commit travis_ruby travis:ruby
       docker -H tcp://0.0.0.0:4243 rm travis_ruby
@@ -44,9 +44,9 @@ In order to build other docker images, the Worker needs to be setup to support D
 
 ```
     export TRAVIS_WORKER_DOCKER_PRIVILEGED="true"
-```       
+```
 
-You will then need to restart each Worker, you can find more information on this here: https://docs.travis-ci.com/user/enterprise/worker-cli-commands/#Stopping-and-Starting-the-Worker.
+You will then need to restart each Worker, you can find more information on this here: [https://docs.travis-ci.com/user/enterprise/worker-cli-commands/#Stopping-and-Starting-the-Worker](https://docs.travis-ci.com/user/enterprise/worker-cli-commands/#Stopping-and-Starting-the-Worker).
 
 ### Updates to your .travis.yml files
 
